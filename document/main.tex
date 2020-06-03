@@ -1,4 +1,91 @@
-\documentclass[a4paper,12pt]{article}
+\documentclass[11pt,oneside]{book}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage{titlesec}
+\usepackage[a4paper,width=150mm,top=30mm,bottom=30mm]{geometry}
+\usepackage{fancyhdr}
+
+\setlength{\headheight}{15.2pt}
+\pagestyle{fancy}
+\fancypagestyle{plain}{
+  \fancyhf{}
+  \fancyfoot[R]{\thepage}
+  \fancyhead{}
+  \renewcommand{\headrulewidth}{0pt}
+}
+\fancyhead{}
+\fancyhead[R]{\textsl{\leftmark\space\rightmark}}
+\fancyfoot{}
+\fancyfoot[R]{\thepage}
+\renewcommand{\chaptermark}[1]{\markboth{\thechapter.\space#1}{}}
+\renewcommand{\sectionmark}[1]{ \markright{\space-\space\thesection\space#1}{} }
+
+\graphicspath{ {images/} }
+\titleformat{\chapter}{\normalfont\huge\bfseries}{\thechapter.}{20pt}{\huge}
+
+\title{
+{\bfseries UNIVERSIDAD MAYOR DE SAN ANDRÉS}\\
+{\large\bfseries FACULTAD DE CIENCIAS PURAS Y NATURALES}\\
+{\large CARRERA DE INFORMÁTICA}\\
+\vspace{1cm}
+{\includegraphics[height=8cm, keepaspectratio]{Umsa-logo.png}}\\
+\vspace{0.5cm}
+{\large PERFIL DE PROYECTO DE GRADO}\\
+{\large\bfseries SISTEMA WEB DE CONTROL DE INVENTARIOS PARA LA EMPRESA CONSTRUCTORA "BAJO CIELO"}\\
+{\large Proyecto de Grado para obtener el Título de Licenciatura en Informática}\\
+{\large Mención Ingeniería de Sistemas Informáticos}\\
+}
+\author{
+  Por: \textbf{Kevin Vargas Mantilla}\\
+  Tutor Metodológico: \textbf{M.Sc. Aldo Valdez Alvarado}\\
+  Asesor: \textbf{Lic. Zeballos}
+}
+\date{
+  La Paz - Bolivia\\
+  Mayo, 2020
+}
+
 \begin{document}
-  Hello world.
+\maketitle
+
+\chapter*{}
+\begin{flushright}
+  To mom and dad
+\end{flushright}
+
+\chapter*{Agradecimientos}
+ To mom and dad
+
+\chapter*{Resumen}
+Este el el resumen es español
+\chapter*{Abstract}
+This is the english abstract
+
+\tableofcontents
+
+\chapter{Introducción}
+\input{sections/introduction.tex}
+
+\chapter{Antecedentes}
+\input{sections/abstract.tex}
+
+\chapter{Planteamiento del Problema}
+\input{sections/problem_statement.tex}
+
+\chapter{Definición de Objetivos}
+\input{sections/objectives.tex}
+
+\chapter{Justificación}
+\input{sections/justification.tex}
+
+\chapter{Alcances y Límites}
+\input{sections/limits.tex}
+
+\chapter{Aportes}
+\input{sections/contributions.tex}
+
+\chapter{Metodología}
+\input{sections/methodology.tex}
+
 \end{document}
